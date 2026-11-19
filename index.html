@@ -2,17 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       @import "./src/style.css";
     </style>
     <title>JSDev</title>
   </head>
   <body>
-    <h1>Alright. You're set.</h1>
-      <h2 class="tintedBlackLeft">Now build something amazing!</h2>
-      <p>JS in FM is amazing</p>
-    <button type="button">Click Me!</button>
-
+    <h2>Document Report</h2>
+    <div class="filters">
+      <input type="text" id="contactFilter" placeholder="Filter by Contact">
+      <input type="text" id="certificationFilter" placeholder="Filter by Certification">
+      <input type="text" id="descriptionFilter" placeholder="Filter by Description">
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+      <input type="text" id="typeFilter" placeholder="Filter by Type">
+      <input type="text" id="fileNameFilter" placeholder="Filter by File Name">
+      <button onclick="filterTable()">Apply Filters</button>
+  </div>
+  
+  <table id="reportTable">
+      <thead>
+          <tr>
+              <th>Contact</th>
+              <th>Certification</th>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th>File Name</th>
+          </tr>
+      </thead>
+      <tbody id="reportBody">
+          <!-- Data will be inserted here dynamically -->
+      </tbody>
+  </table>
     <script type="module">
       import "./src/index.js";
     </script>
